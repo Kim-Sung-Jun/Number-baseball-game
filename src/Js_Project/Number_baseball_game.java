@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Number_baseball_game {
     List<Integer> list = new ArrayList<>();
+    Nbg_input input = new Nbg_input();
 
     void 정답randomnumber() {
         int number;
@@ -14,20 +15,21 @@ public class Number_baseball_game {
         }
     }
 
-    void 정답listadd(int num) {
-        if (!list.contains(num)) {
-            list.add(num);
+    void 정답listadd(int number) {
+        if (!list.contains(number)) {
+            list.add(number);
         }
     }
 
     public static void main(String[] args) {
         Number_baseball_game cal = new Number_baseball_game();
-        Nbg_input input = new Nbg_input();
         cal.정답randomnumber();
-        while (true) {
-            input.input();
+        int count = 0;
+        while (count < 1) {
+            cal.input.input();
             System.out.println(cal.list);
-            System.out.println(cal.제출);
+            System.out.println(cal.input.입력숫자);
+            count++;
         }
     }
 }
