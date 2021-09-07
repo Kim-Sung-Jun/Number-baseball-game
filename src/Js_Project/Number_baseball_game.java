@@ -2,34 +2,32 @@ package Js_Project;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Number_baseball_game {
-    public static List<Integer> randomnumber() {
-        List<Integer> list = new ArrayList<>();
+    List<Integer> list = new ArrayList<>();
+
+    void 정답randomnumber() {
+        int number;
         while (list.size() < 3) {
-            int num = (int) (Math.random() * 9) + 1;
-            if (!list.contains(num)) {
-                list.add(num);
-            }
+            number = (int) (Math.random() * 9) + 1;
+            정답listadd(number);
         }
-        return (list);
+    }
+
+    void 정답listadd(int num) {
+        if (!list.contains(num)) {
+            list.add(num);
+        }
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Integer> 정답 = randomnumber();
-        boolean 스트라이크수 = true;
-        int 다시시작 = 0;
-        int Out = 0;
-        int Ball = 0;
-        int Strike = 0;
-        while (스트라이크수) {
-            List<Integer> 제출 = new ArrayList<>();
-            for (int i = 0; i < 3; i++) {
-                제출.add(scanner.nextInt());
-            }
-
+        Number_baseball_game cal = new Number_baseball_game();
+        Nbg_input input = new Nbg_input();
+        cal.정답randomnumber();
+        while (true) {
+            input.input();
+            System.out.println(cal.list);
+            System.out.println(cal.제출);
         }
     }
 }
