@@ -1,30 +1,46 @@
 package Js_Project;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Nbg_Analyze {
-    Number_baseball_game mainclass = new Number_baseball_game();
+    List<Integer> list = new ArrayList<>();
     Nbg_input inputclass = new Nbg_input();
-    Nbg_output outputclass = new Nbg_output();
     int count = 0;
+
+    void 정답randomnumber() {
+        int number;
+        while (list.size() < 3) {
+            number = (int) (Math.random() * 9) + 1;
+            정답listadd(number);
+        }
+    }
+
+    void 정답listadd(int number) {
+        if (!list.contains(number)) {
+            list.add(number);
+        }
+    }
 
     public void Repeat() {
         while (count < 3) {
             StrikeExploring();
             count++;
         }
-        outputclass.낫싱print();
+        inputclass.outputclass.낫싱print();
     }
 
     public void StrikeExploring() {
-        if (mainclass.list.contains(inputclass.입력숫자.get(count)) && mainclass.list.indexOf(inputclass.입력숫자.get(count)) == count) {
-            outputclass.Strike++;
+        if (list.contains(inputclass.입력숫자.get(count)) && list.indexOf(inputclass.입력숫자.get(count)) == count) {
+            inputclass.outputclass.Strike++;
         } else {
             BallExploring();
         }
     }
 
     public void BallExploring() {
-        if (mainclass.list.contains(inputclass.입력숫자.get(count))) {
-            outputclass.Ball++;
+        if (list.contains(inputclass.입력숫자.get(count))) {
+            inputclass.outputclass.Ball++;
         }
     }
 }

@@ -1,7 +1,6 @@
 package Js_Project;
 
 public class Nbg_output {
-    Nbg_Analyze analyzeclass = new Nbg_Analyze();
     int Ball = 0;
     int Strike = 0;
 
