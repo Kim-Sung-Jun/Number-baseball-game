@@ -1,7 +1,5 @@
 package Js_Project2;
 
-import Js_Project1.Exploring;
-
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -9,6 +7,15 @@ import java.util.Set;
 public class Storage {
     Set<Integer> randomNumberList = new LinkedHashSet<>();
     Set<Integer> list = new LinkedHashSet<>();
+
+    Exploring exploring = new Exploring();
+
+    public void listClear() {
+        list.clear();
+        exploring.strike = 0;
+        exploring.ball = 0;
+        exploring.count = 0;
+    }
 
     public Set<Integer> makeRandomNumber() {
         while (randomNumberList.size() < 3) {
