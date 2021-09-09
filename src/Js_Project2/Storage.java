@@ -3,31 +3,22 @@ package Js_Project2;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-//저장소
+//중복숫자 제거 저장소
 public class Storage {
     Set<Integer> randomNumberList = new LinkedHashSet<>();
-    Set<Integer> list = new LinkedHashSet<>();
+    Set<Integer> inputList = new LinkedHashSet<>();
 
-    Exploring exploring = new Exploring();
-
-    public void listClear() {
-        list.clear();
-        exploring.strike = 0;
-        exploring.ball = 0;
-        exploring.count = 0;
-    }
-
-    public Set<Integer> makeRandomNumber() {
+    public Set<Integer> makeRandomNumber() { //0~9 중복없이 랜덤생성메서드
         while (randomNumberList.size() < 3) {
             randomNumberList.add((int) (Math.random() * 9) + 1);
         }
         return randomNumberList;
     }
 
-    public Set<Integer> filterDuplicatedInputNumber(String input) {
+    public Set<Integer> filterDuplicatedInputNumber(String input) { //입력숫자 저장소
         for (int i = 0; i < 3; i++) {
-            list.add((int) input.charAt(i) - '0');
+            inputList.add((int) input.charAt(i) - '0');
         }
-        return list;
+        return inputList;
     }
 }
