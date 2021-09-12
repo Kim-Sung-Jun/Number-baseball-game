@@ -2,6 +2,7 @@ package Js_Project2;
 
 //출력
 public class Output {
+
     void nothingPrint(int strike, int ball) { //낫싱 출력메서드
         if (strike == 0 && ball == 0) {
             System.out.println("낫싱");

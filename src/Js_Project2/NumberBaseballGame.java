@@ -2,6 +2,7 @@ package Js_Project2;
 
 //몸체
 public class NumberBaseballGame {
+
     private boolean start = true;                    //게임반복용
     Exploring exploring = new Exploring();
     Storage storage = new Storage();
@@ -15,12 +16,12 @@ public class NumberBaseballGame {
         }
     }
 
-    private void listClear() { //초기화메서드
-        storage.inputList.clear();
-        exploring.strike = 0;
-        exploring.ball = 0;
-        exploring.count = 0;
-    }
+//    private void listClear() { //초기화메서드
+//        storage.inputSet.clear();
+//        exploring.strike = 0;
+//        exploring.ball = 0;
+//        exploring.count = 0;
+//    }
 
     private void notThreeStrike() { //스트라이크 갯수 확인메서드
         if (exploring.strike != 3) {

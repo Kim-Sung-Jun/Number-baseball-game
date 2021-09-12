@@ -2,7 +2,6 @@ package Js_Project2;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 //탐색
 public class Exploring {
@@ -10,14 +9,22 @@ public class Exploring {
     int strike = 0;
     int ball = 0;
 
-    void Repeat(Set<Integer> random, Set<Integer> input) { //반복메서드
+    private void listClear() { //초기화메서드 //다시하기
+        //storage.inputSet.clear();
+        strike = 0;
+        ball = 0;
+        count = 0;
+    }
+
+
+    public void Repeat(List<Integer> random, List<Integer> input) { //반복메서드
         while (count < 3) {
             changeSetToList(random, input);
             count++;
         }
     }
 
-    private void changeSetToList(Set<Integer> randomset, Set<Integer> input) { //셋을 리스트로 변경메서드
+    private void changeSetToList(List<Integer> randomset, List<Integer> input) { //셋을 리스트로 변경메서드
         List<Integer> randomList = new ArrayList<>(randomset);
         List<Integer> inputList = new ArrayList<>(input);
         strikeExploring(randomList, inputList);
