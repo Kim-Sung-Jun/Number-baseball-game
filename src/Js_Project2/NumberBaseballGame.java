@@ -9,38 +9,32 @@ public class NumberBaseballGame {
 
     void play(Input input, Output output) { //게임기메서드
         while (start) {
-            listClear();                     //초기화
-            exploring.Repeat(storage.makeRandomNumber(), storage.filterDuplicatedInputNumber(input.numberInput()));
-            output.nothingPrint(exploring.strike, exploring.ball);
-            notThreeStrike();               //스트라이크 카운트
+            exploring.clearValue();
+            exploring.repeat(storage.changeRandomNumberType(), storage.filterDuplicatedInputNumber(input.numberInput()));
+            output.nothingPrint(exploring.getStrike(), exploring.getBall());
+            notThreeStrike();
         }
     }
-
-//    private void listClear() { //초기화메서드
-//        storage.inputSet.clear();
-//        exploring.strike = 0;
-//        exploring.ball = 0;
-//        exploring.count = 0;
-//    }
 
     private void notThreeStrike() { //스트라이크 갯수 확인메서드
-        if (exploring.strike != 3) {
+        if (exploring.getStrike() != 3) {
             start = true;
         } else {
-            startOrEnd();
+            ChooseInput();
         }
     }
 
-    private void startOrEnd() { //스트라이크 3개 다 맞추면 안내문 발송메서드
+    private void ChooseInput() { //스트라이크 3개 다 맞추면 안내문 발송메서드
         Output output = new Output();
         Input input = new Input();
         output.startNewGamePrint();
-        startOrEnd2(input.newNumber());
+        startOrEnd(input.newNumber());
     }
 
-    private void startOrEnd2(int newNumber) { //재시작 여부메서드
+    private void startOrEnd(int newNumber) { //재시작 여부메서드
         if (newNumber == 1) {
             start = true;
+            storage.Initialize();
         } else if (newNumber == 2) {
             start = false;
         }

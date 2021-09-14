@@ -3,7 +3,7 @@ package Js_Project2;
 //출력
 public class Output {
 
-    void nothingPrint(int strike, int ball) { //낫싱 출력메서드
+    public void nothingPrint(int strike, int ball) { //낫싱 출력메서드
         if (strike == 0 && ball == 0) {
             System.out.println("낫싱");
         } else {
@@ -27,7 +27,7 @@ public class Output {
         }
     }
 
-    void startNewGamePrint() { //안내문 메서드
+    public void startNewGamePrint() { //안내문 메서드
         System.out.println("3개의숫자를모두맞히셨습니다!게임종료");
         System.out.println("게임을새로시작하려면1,종료하려면2를입력하세요.");
     }
