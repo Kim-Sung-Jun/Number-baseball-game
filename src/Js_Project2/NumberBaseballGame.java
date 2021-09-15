@@ -7,7 +7,7 @@ public class NumberBaseballGame {
     Exploring exploring = new Exploring();
     Storage storage = new Storage();
 
-    void play(Input input, Output output) { //게임기메서드
+    public void play(Input input, Output output) { //게임기메서드
         while (start) {
             exploring.clearValue();
             exploring.repeat(storage.changeRandomNumberType(), storage.filterDuplicatedInputNumber(input.numberInput()));
