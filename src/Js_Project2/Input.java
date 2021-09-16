@@ -5,9 +5,9 @@ import java.util.Scanner;
 //입력
 public class Input {
 
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
-    public String numberInput() { //게임시작 숫자입력메서드
+    public String inputNumber() { //게임시작 숫자입력메서드
         System.out.print("숫자를 입력해주세요:");
         return scanner.next();
     }

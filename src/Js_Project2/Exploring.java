@@ -2,54 +2,34 @@ package Js_Project2;
 
 import java.util.List;
 
+import static Js_Project2.NumberBaseballGame.numberIndex;
+
 //탐색
 public class Exploring {
 
-    private final int LAST_INDEX = 2;
-    private int count = 0;
-    private int strike = 0;
-    private int ball = 0;
-
-    public void clearValue() { //초기화메서드 //다시하기
-        strike = 0;
-        ball = 0;
-        count = 0;
-    }
-
-    public int getStrike() {
-        return strike;
-    }
-
-    public int getBall() {
-        return ball;
-    }
-
-    public void repeat(List<Integer> random, List<Integer> input) { //반복메서드
-        while (count <= LAST_INDEX) {
-            exploringStrike(random, input);
-            count++;
-        }
-    }
-
-    private void exploringStrike(List<Integer> random, List<Integer> input) { //스트라이크 적립메서드
+    public int exploringStrike(List<Integer> random, List<Integer> input) { //스트라이크 적립메서드
         if (isValidStrike(random, input)) {
-            strike++;
+            return 1;
         } else {
-            exploringBall(random, input);
+            return 0;
         }
     }
 
     private boolean isValidStrike(List<Integer> random, List<Integer> input) {
-        return random.contains(input.get(count)) && random.indexOf(input.get(count)) == count;
+        return random.contains(input.get(numberIndex)) && random.indexOf(input.get(numberIndex)) == numberIndex;
     }
 
-    private void exploringBall(List<Integer> random, List<Integer> input) { //볼 적립메서드
+    public int exploringBall(List<Integer> random, List<Integer> input) { //볼 적립메서드
         if (isValidBall(random, input)) {
-            ball++;
+            return 1;
+        } else {
+            return 0;
         }
     }
 
     private boolean isValidBall(List<Integer> random, List<Integer> input) {
-        return random.contains(input.get(count));
+        return random.contains(input.get(numberIndex)) && random.indexOf(input.get(numberIndex)) != numberIndex;
     }
+
+
 }
