@@ -6,9 +6,9 @@ public class Storage {
     private int strike;
     private int ball;
 
-    public void eraseStorageValue() {
-        this.strike = 0;
-        this.ball = 0;
+    public Storage() {
+        strike = 0;
+        ball = 0;
     }
 
     public int getStrike() {
@@ -29,8 +29,12 @@ public class Storage {
         System.out.println(this.ball);
     }
 
-//
-//
+    public void InitializeValue() {
+        strike = 0;
+        ball = 0;
+    }
+}
+
 //    public void Initialize() {
 //        randomNumbers.clear();
 //        randomNumber.clear();
@@ -44,4 +48,4 @@ public class Storage {
 //        this.ball += ball;
 //    }
 
-}
+

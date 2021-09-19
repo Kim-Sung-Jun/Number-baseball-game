@@ -6,15 +6,16 @@ import java.util.List;
 public class NumberBaseballGame {
 
     public static boolean startValue = true;                   //게임반복용
-    InputNumber inputNumber = new InputNumber();
-    Exploring exploring = new Exploring();
-    Storage storage = new Storage();
-    Replay replay = new Replay();
-    RandomnessNumber randomnessNumber = new RandomnessNumber();
+    public InputNumber inputNumber = new InputNumber();
+    public Exploring exploring = new Exploring();
+    public Storage storage = new Storage();
+    public Replay replay = new Replay();
+    public RandomnessNumber randomnessNumber = new RandomnessNumber();
 
     private static final int RESTART = 1;
     private static final int MAX_VALUE = 3;
     private static final int LAST_INDEX = 2;
+
     public static int numberIndex = 0; //생성자 만들어주기
 
     public void play(Input input, Output output) { //게임기메서드
@@ -22,8 +23,8 @@ public class NumberBaseballGame {
             repeatExploring(randomnessNumber.makeRandomNumber(), inputNumber.filterDuplicatedInputNumber(input.inputNumber()));
             output.nothingPrint(storage.getStrike(), storage.getBall());
             checkStrike(input);
-            storage.eraseStorageValue();
             numberIndex = 0;
+            storage.InitializeValue();
         }
     }
 
@@ -42,10 +43,6 @@ public class NumberBaseballGame {
             startOrEnd(input.newNumber());
         }
     }
-
-//    private List<Integer> createRandomNumber() {                              //랜덤숫자생성 및 타입변환 메서드
-//        return randomnessNumber.transformRandomNumberType(randomnessNumber.makeRandomNumber());
-//    }
 
     private void repeatExploring(List<Integer> random, List<Integer> input) {  //반복 탐색 메서드
         while (numberIndex <= LAST_INDEX) {

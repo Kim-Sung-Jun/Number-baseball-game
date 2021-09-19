@@ -1,7 +1,7 @@
 package Js_Project2;
 
 //실행
-public class NumberBaseBallGameDriver {
+public class NumberBaseballGameDriver {
 
     public static void main(String[] args) {
         Input input = new Input();

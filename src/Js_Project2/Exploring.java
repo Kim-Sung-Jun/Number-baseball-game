@@ -30,6 +30,4 @@ public class Exploring {
     private boolean isValidBall(List<Integer> random, List<Integer> input) {
         return random.contains(input.get(numberIndex)) && random.indexOf(input.get(numberIndex)) != numberIndex;
     }
-
-
 }

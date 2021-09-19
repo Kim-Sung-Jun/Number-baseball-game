@@ -28,7 +28,6 @@ public class RandomnessNumber {
         temporaryRandomNumberStorage.clear();
     }
 
-
 //    public List<Integer> transformRandomNumberType(Set<Integer> temporaryRandomNumberStorage) { //리스트 초기화해줘야댐
 //        confirmationRandomNumberStorage.addAll(temporaryRandomNumberStorage);
 //        System.out.println(confirmationRandomNumberStorage);
