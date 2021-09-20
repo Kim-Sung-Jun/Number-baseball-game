@@ -20,5 +20,4 @@ public class InputNumber {
         System.out.println(confirmationInputNumberStorage); //임시
         return confirmationInputNumberStorage;
     }
-
 }
