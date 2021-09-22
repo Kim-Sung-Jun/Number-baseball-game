@@ -5,12 +5,12 @@ import java.util.List;
 //몸체
 public class NumberBaseballGame {
 
-    public static boolean startValue = true;                   //게임반복용
-    public InputNumber inputNumber = new InputNumber();
-    public Exploring exploring = new Exploring();
-    public Storage storage = new Storage();
-    public Replay replay = new Replay();
-    public RandomnessNumber randomnessNumber = new RandomnessNumber();
+    private static boolean startValue = true;                   //게임반복용
+    private final InputNumber inputNumber = new InputNumber();
+    private final Exploring exploring = new Exploring();
+    private final Storage storage = new Storage();
+    private final Replay replay = new Replay();
+    private final RandomnessNumber randomnessNumber = new RandomnessNumber();
 
     private static final int RESTART = 1;
     private static final int MAX_VALUE = 3;

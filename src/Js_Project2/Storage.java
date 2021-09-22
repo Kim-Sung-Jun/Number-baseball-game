@@ -35,17 +35,4 @@ public class Storage {
     }
 }
 
-//    public void Initialize() {
-//        randomNumbers.clear();
-//        randomNumber.clear();
-//    }
-//    public Storage() { //기본생성자, 값을 초기화
-//        this(INITIAL_PRICE, INITIAL_PRICE);
-//    }
-//
-//    public Storage(int strike, int ball) {
-//        this.strike += strike;
-//        this.ball += ball;
-//    }
-
 
