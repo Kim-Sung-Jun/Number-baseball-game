@@ -1,7 +1,6 @@
 package Js_Project2;
 
 import java.util.Scanner;
-
 //입력
 public class Input {
 
